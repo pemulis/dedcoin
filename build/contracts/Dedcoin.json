@@ -413,7 +413,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 871,
+          "SourceUnit": 882,
           "absolutePath": "zeppelin-solidity/contracts/token/ERC20/MintableToken.sol",
           "file": "zeppelin-solidity/contracts/token/ERC20/MintableToken.sol",
           "scope": 107,
@@ -429,24 +429,24 @@
       {
         "attributes": {
           "contractDependencies": [
-            604,
-            700,
-            743,
-            775,
-            870,
-            1116
+            615,
+            711,
+            754,
+            786,
+            881,
+            1127
           ],
           "contractKind": "contract",
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
             106,
-            870,
-            604,
-            1116,
-            700,
-            743,
-            775
+            881,
+            615,
+            1127,
+            711,
+            754,
+            786
           ],
           "name": "Dedcoin",
           "scope": 107
@@ -463,7 +463,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "MintableToken",
-                  "referencedDeclaration": 870,
+                  "referencedDeclaration": 881,
                   "type": "contract MintableToken"
                 },
                 "id": 95,
@@ -653,5 +653,5 @@
     }
   },
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-02-22T23:24:29.950Z"
+  "updatedAt": "2018-02-22T23:43:07.842Z"
 }
