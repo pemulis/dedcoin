@@ -164,6 +164,14 @@
         {
           "name": "_finalRate",
           "type": "uint256"
+        },
+        {
+          "name": "_openingTime",
+          "type": "uint256"
+        },
+        {
+          "name": "_closingTime",
+          "type": "uint256"
         }
       ],
       "payable": false,
@@ -207,14 +215,14 @@
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "pragma solidity ^0.4.18;\n\nimport './Dedcoin.sol';\nimport './DecreasingPriceCrowdsale.sol';\n\n\ncontract DedcoinCrowdsale is DecreasingPriceCrowdsale {\n\n  function DedcoinCrowdsale(uint256 _initialRate, uint256 _finalRate)\n    DecreasingPriceCrowdsale(_initialRate, _finalRate) {\n    // _initialRate = 1/30000000000000000\n    // _finalRate = 1\n  }\n\n  // creates the token to be sold.\n  // override this method to have crowdsale of a specific MintableToken token.\n  function createTokenContract() internal returns (MintableToken) {\n    return new Dedcoin();\n  }\n\n}\n",
+  "source": "pragma solidity ^0.4.18;\n\nimport './Dedcoin.sol';\nimport './DecreasingPriceCrowdsale.sol';\n\n\ncontract DedcoinCrowdsale is DecreasingPriceCrowdsale {\n\n  function DedcoinCrowdsale(uint256 _initialRate, uint256 _finalRate, uint256 _openingTime, uint256 _closingTime)\n    DecreasingPriceCrowdsale(_initialRate, _finalRate)\n    TimedCrowdsale(_openingTime, _closingTime) {\n  }\n\n  // creates the token to be sold.\n  // override this method to have crowdsale of a specific MintableToken token.\n  function createTokenContract() internal returns (MintableToken) {\n    return new Dedcoin();\n  }\n\n}\n",
   "sourcePath": "/Users/j/Coding/dedcoin/contracts/DedcoinCrowdsale.sol",
   "ast": {
     "attributes": {
       "absolutePath": "/Users/j/Coding/dedcoin/contracts/DedcoinCrowdsale.sol",
       "exportedSymbols": {
         "DedcoinCrowdsale": [
-          135
+          143
         ]
       }
     },
@@ -237,7 +245,7 @@
           "SourceUnit": 107,
           "absolutePath": "/Users/j/Coding/dedcoin/contracts/Dedcoin.sol",
           "file": "./Dedcoin.sol",
-          "scope": 136,
+          "scope": 144,
           "symbolAliases": [
             null
           ],
@@ -252,7 +260,7 @@
           "SourceUnit": 92,
           "absolutePath": "/Users/j/Coding/dedcoin/contracts/DecreasingPriceCrowdsale.sol",
           "file": "./DecreasingPriceCrowdsale.sol",
-          "scope": 136,
+          "scope": 144,
           "symbolAliases": [
             null
           ],
@@ -267,20 +275,20 @@
           "contractDependencies": [
             91,
             106,
-            359,
-            442
+            367,
+            450
           ],
           "contractKind": "contract",
           "documentation": null,
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            135,
+            143,
             91,
-            442,
-            359
+            450,
+            367
           ],
           "name": "DedcoinCrowdsale",
-          "scope": 136
+          "scope": 144
         },
         "children": [
           {
@@ -313,7 +321,7 @@
               "isConstructor": true,
               "name": "DedcoinCrowdsale",
               "payable": false,
-              "scope": 135,
+              "scope": 143,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -325,7 +333,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_initialRate",
-                      "scope": 124,
+                      "scope": 132,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -351,7 +359,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_finalRate",
-                      "scope": 124,
+                      "scope": 132,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -372,11 +380,63 @@
                     "id": 116,
                     "name": "VariableDeclaration",
                     "src": "200:18:2"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_openingTime",
+                      "scope": 132,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 117,
+                        "name": "ElementaryTypeName",
+                        "src": "220:7:2"
+                      }
+                    ],
+                    "id": 118,
+                    "name": "VariableDeclaration",
+                    "src": "220:20:2"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_closingTime",
+                      "scope": 132,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 119,
+                        "name": "ElementaryTypeName",
+                        "src": "242:7:2"
+                      }
+                    ],
+                    "id": 120,
+                    "name": "VariableDeclaration",
+                    "src": "242:20:2"
                   }
                 ],
-                "id": 117,
+                "id": 121,
                 "name": "ParameterList",
-                "src": "177:42:2"
+                "src": "177:86:2"
               },
               {
                 "attributes": {
@@ -385,9 +445,9 @@
                   ]
                 },
                 "children": [],
-                "id": 122,
+                "id": 130,
                 "name": "ParameterList",
-                "src": "275:0:2"
+                "src": "366:0:2"
               },
               {
                 "children": [
@@ -401,9 +461,9 @@
                       "type": "type(contract DecreasingPriceCrowdsale)",
                       "value": "DecreasingPriceCrowdsale"
                     },
-                    "id": 118,
+                    "id": 122,
                     "name": "Identifier",
-                    "src": "224:24:2"
+                    "src": "268:24:2"
                   },
                   {
                     "attributes": {
@@ -415,9 +475,9 @@
                       "type": "uint256",
                       "value": "_initialRate"
                     },
-                    "id": 119,
+                    "id": 123,
                     "name": "Identifier",
-                    "src": "249:12:2"
+                    "src": "293:12:2"
                   },
                   {
                     "attributes": {
@@ -429,14 +489,63 @@
                       "type": "uint256",
                       "value": "_finalRate"
                     },
-                    "id": 120,
+                    "id": 124,
                     "name": "Identifier",
-                    "src": "263:10:2"
+                    "src": "307:10:2"
                   }
                 ],
-                "id": 121,
+                "id": 125,
                 "name": "ModifierInvocation",
-                "src": "224:50:2"
+                "src": "268:50:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 450,
+                      "type": "type(contract TimedCrowdsale)",
+                      "value": "TimedCrowdsale"
+                    },
+                    "id": 126,
+                    "name": "Identifier",
+                    "src": "323:14:2"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 118,
+                      "type": "uint256",
+                      "value": "_openingTime"
+                    },
+                    "id": 127,
+                    "name": "Identifier",
+                    "src": "338:12:2"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 120,
+                      "type": "uint256",
+                      "value": "_closingTime"
+                    },
+                    "id": 128,
+                    "name": "Identifier",
+                    "src": "352:12:2"
+                  }
+                ],
+                "id": 129,
+                "name": "ModifierInvocation",
+                "src": "323:42:2"
               },
               {
                 "attributes": {
@@ -445,14 +554,14 @@
                   ]
                 },
                 "children": [],
-                "id": 123,
+                "id": 131,
                 "name": "Block",
-                "src": "275:69:2"
+                "src": "366:5:2"
               }
             ],
-            "id": 124,
+            "id": 132,
             "name": "FunctionDefinition",
-            "src": "152:192:2"
+            "src": "152:219:2"
           },
           {
             "attributes": {
@@ -464,7 +573,7 @@
               ],
               "name": "createTokenContract",
               "payable": false,
-              "scope": 135,
+              "scope": 143,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "internal"
@@ -477,9 +586,9 @@
                   ]
                 },
                 "children": [],
-                "id": 125,
+                "id": 133,
                 "name": "ParameterList",
-                "src": "490:2:2"
+                "src": "517:2:2"
               },
               {
                 "children": [
@@ -487,7 +596,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 134,
+                      "scope": 142,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "contract MintableToken",
@@ -499,28 +608,28 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "MintableToken",
-                          "referencedDeclaration": 862,
+                          "referencedDeclaration": 870,
                           "type": "contract MintableToken"
                         },
-                        "id": 126,
+                        "id": 134,
                         "name": "UserDefinedTypeName",
-                        "src": "511:13:2"
+                        "src": "538:13:2"
                       }
                     ],
-                    "id": 127,
+                    "id": 135,
                     "name": "VariableDeclaration",
-                    "src": "511:13:2"
+                    "src": "538:13:2"
                   }
                 ],
-                "id": 128,
+                "id": 136,
                 "name": "ParameterList",
-                "src": "510:15:2"
+                "src": "537:15:2"
               },
               {
                 "children": [
                   {
                     "attributes": {
-                      "functionReturnParameters": 128
+                      "functionReturnParameters": 136
                     },
                     "children": [
                       {
@@ -560,44 +669,44 @@
                                   "referencedDeclaration": 106,
                                   "type": "contract Dedcoin"
                                 },
-                                "id": 129,
+                                "id": 137,
                                 "name": "UserDefinedTypeName",
-                                "src": "543:7:2"
+                                "src": "570:7:2"
                               }
                             ],
-                            "id": 130,
+                            "id": 138,
                             "name": "NewExpression",
-                            "src": "539:11:2"
+                            "src": "566:11:2"
                           }
                         ],
-                        "id": 131,
+                        "id": 139,
                         "name": "FunctionCall",
-                        "src": "539:13:2"
+                        "src": "566:13:2"
                       }
                     ],
-                    "id": 132,
+                    "id": 140,
                     "name": "Return",
-                    "src": "532:20:2"
+                    "src": "559:20:2"
                   }
                 ],
-                "id": 133,
+                "id": 141,
                 "name": "Block",
-                "src": "526:31:2"
+                "src": "553:31:2"
               }
             ],
-            "id": 134,
+            "id": 142,
             "name": "FunctionDefinition",
-            "src": "462:95:2"
+            "src": "489:95:2"
           }
         ],
-        "id": 135,
+        "id": 143,
         "name": "ContractDefinition",
-        "src": "93:467:2"
+        "src": "93:494:2"
       }
     ],
-    "id": 136,
+    "id": 144,
     "name": "SourceUnit",
-    "src": "0:561:2"
+    "src": "0:588:2"
   },
   "compiler": {
     "name": "solc",
@@ -605,5 +714,5 @@
   },
   "networks": {},
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-02-22T21:48:59.020Z"
+  "updatedAt": "2018-02-22T23:24:29.949Z"
 }

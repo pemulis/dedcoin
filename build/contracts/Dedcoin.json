@@ -413,7 +413,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 863,
+          "SourceUnit": 871,
           "absolutePath": "zeppelin-solidity/contracts/token/ERC20/MintableToken.sol",
           "file": "zeppelin-solidity/contracts/token/ERC20/MintableToken.sol",
           "scope": 107,
@@ -429,24 +429,24 @@
       {
         "attributes": {
           "contractDependencies": [
-            596,
-            692,
-            735,
-            767,
-            862,
-            1108
+            604,
+            700,
+            743,
+            775,
+            870,
+            1116
           ],
           "contractKind": "contract",
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
             106,
-            862,
-            596,
-            1108,
-            692,
-            735,
-            767
+            870,
+            604,
+            1116,
+            700,
+            743,
+            775
           ],
           "name": "Dedcoin",
           "scope": 107
@@ -463,7 +463,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "MintableToken",
-                  "referencedDeclaration": 862,
+                  "referencedDeclaration": 870,
                   "type": "contract MintableToken"
                 },
                 "id": 95,
@@ -630,8 +630,28 @@
       "events": {},
       "links": {},
       "address": "0x28cd450266f8a9f3c79f39bb4f8123babcf13dd1"
+    },
+    "1519337099675": {
+      "events": {},
+      "links": {},
+      "address": "0x629834a9be856267862bfdf7cefd34f214dc6388"
+    },
+    "1519337255574": {
+      "events": {},
+      "links": {},
+      "address": "0x36812af6a4ee3ac053c65b7f05acc87c6978b9f5"
+    },
+    "1519337463438": {
+      "events": {},
+      "links": {},
+      "address": "0x3db6203e365fa72d2d31ab1cea9a302a79783e63"
+    },
+    "1519338685791": {
+      "events": {},
+      "links": {},
+      "address": "0x14be7ba471cd432f2a2c97cbe5b8e793f8244eae"
     }
   },
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-02-22T21:51:06.606Z"
+  "updatedAt": "2018-02-22T23:24:29.950Z"
 }

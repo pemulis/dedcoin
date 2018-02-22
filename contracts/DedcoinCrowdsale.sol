@@ -6,10 +6,9 @@ import './DecreasingPriceCrowdsale.sol';
 
 contract DedcoinCrowdsale is DecreasingPriceCrowdsale {
 
-  function DedcoinCrowdsale(uint256 _initialRate, uint256 _finalRate)
-    DecreasingPriceCrowdsale(_initialRate, _finalRate) {
-    // _initialRate = 1/30000000000000000
-    // _finalRate = 1
+  function DedcoinCrowdsale(uint256 _initialRate, uint256 _finalRate, uint256 _openingTime, uint256 _closingTime)
+    DecreasingPriceCrowdsale(_initialRate, _finalRate)
+    TimedCrowdsale(_openingTime, _closingTime) {
   }
 
   // creates the token to be sold.

@@ -234,7 +234,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 443,
+          "SourceUnit": 451,
           "absolutePath": "zeppelin-solidity/contracts/crowdsale/validation/TimedCrowdsale.sol",
           "file": "zeppelin-solidity/contracts/crowdsale/validation/TimedCrowdsale.sol",
           "scope": 92,
@@ -249,7 +249,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 541,
+          "SourceUnit": 549,
           "absolutePath": "zeppelin-solidity/contracts/math/SafeMath.sol",
           "file": "zeppelin-solidity/contracts/math/SafeMath.sol",
           "scope": 92,
@@ -265,16 +265,16 @@
       {
         "attributes": {
           "contractDependencies": [
-            359,
-            442
+            367,
+            450
           ],
           "contractKind": "contract",
           "documentation": "@title DecreasingPriceCrowdsale\n@dev Extension of Crowdsale contract that decreases the price of tokens linearly in time.\nNote that what should be provided to the constructor is the initial and final _rates_, that is,\nthe amount of tokens per wei contributed. Thus, the initial rate must be lower than the final rate.",
           "fullyImplemented": false,
           "linearizedBaseContracts": [
             91,
-            442,
-            359
+            450,
+            367
           ],
           "name": "DecreasingPriceCrowdsale",
           "scope": 92
@@ -291,7 +291,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "TimedCrowdsale",
-                  "referencedDeclaration": 442,
+                  "referencedDeclaration": 450,
                   "type": "contract TimedCrowdsale"
                 },
                 "id": 4,
@@ -309,7 +309,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "SafeMath",
-                  "referencedDeclaration": 540,
+                  "referencedDeclaration": 548,
                   "type": "library SafeMath"
                 },
                 "id": 6,
@@ -498,7 +498,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 1123,
+                              "referencedDeclaration": 1131,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -799,7 +799,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "sub",
-                              "referencedDeclaration": 515,
+                              "referencedDeclaration": 523,
                               "type": "function (uint256,uint256) pure returns (uint256)"
                             },
                             "children": [
@@ -809,7 +809,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1122,
+                                  "referencedDeclaration": 1130,
                                   "type": "uint256",
                                   "value": "now"
                                 },
@@ -828,7 +828,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 370,
+                              "referencedDeclaration": 378,
                               "type": "uint256",
                               "value": "openingTime"
                             },
@@ -907,7 +907,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "sub",
-                              "referencedDeclaration": 515,
+                              "referencedDeclaration": 523,
                               "type": "function (uint256,uint256) pure returns (uint256)"
                             },
                             "children": [
@@ -917,7 +917,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 372,
+                                  "referencedDeclaration": 380,
                                   "type": "uint256",
                                   "value": "closingTime"
                                 },
@@ -936,7 +936,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 370,
+                              "referencedDeclaration": 378,
                               "type": "uint256",
                               "value": "openingTime"
                             },
@@ -1015,7 +1015,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "sub",
-                              "referencedDeclaration": 515,
+                              "referencedDeclaration": 523,
                               "type": "function (uint256,uint256) pure returns (uint256)"
                             },
                             "children": [
@@ -1095,7 +1095,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "sub",
-                              "referencedDeclaration": 515,
+                              "referencedDeclaration": 523,
                               "type": "function (uint256,uint256) pure returns (uint256)"
                             },
                             "children": [
@@ -1146,7 +1146,7 @@
                                   "isPure": false,
                                   "lValueRequested": false,
                                   "member_name": "div",
-                                  "referencedDeclaration": 495,
+                                  "referencedDeclaration": 503,
                                   "type": "function (uint256,uint256) pure returns (uint256)"
                                 },
                                 "children": [
@@ -1178,7 +1178,7 @@
                                           "isPure": false,
                                           "lValueRequested": false,
                                           "member_name": "mul",
-                                          "referencedDeclaration": 477,
+                                          "referencedDeclaration": 485,
                                           "type": "function (uint256,uint256) pure returns (uint256)"
                                         },
                                         "children": [
@@ -1276,7 +1276,7 @@
               "payable": false,
               "scope": 91,
               "stateMutability": "view",
-              "superFunction": 347,
+              "superFunction": 355,
               "visibility": "internal"
             },
             "children": [
@@ -1458,7 +1458,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "mul",
-                              "referencedDeclaration": 477,
+                              "referencedDeclaration": 485,
                               "type": "function (uint256,uint256) pure returns (uint256)"
                             },
                             "children": [
@@ -1531,5 +1531,5 @@
   },
   "networks": {},
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-02-22T21:48:59.020Z"
+  "updatedAt": "2018-02-22T23:24:29.948Z"
 }
