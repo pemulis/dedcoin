@@ -26,13 +26,13 @@ module.exports = {
       // truffle deploy --network rinkeby
       // truffle(rinkeby)> web3.eth.getBlock("pending", (error, result) =>
       //   console.log(result.gasLimit))
-      gas: 4600000,
+      gas: 4712388,
       gasPrice: web3.toWei("20", "gwei"),
       network_id: "3",
     },
     mainnet: {
       provider: mainNetProvider,
-      gas: 4600000,
+      gas: 4712388,
       gasPrice: web3.toWei("20", "gwei"),
       network_id: "1",
     }
