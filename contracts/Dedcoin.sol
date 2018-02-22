@@ -1,5 +1,5 @@
 pragma solidity ^0.4.18;
-import "zeppelin-solidity/contracts/token/StandardToken.sol";
+import "zeppelin-solidity/contracts/token/ERC20/StandardToken.sol";
 
 contract Dedcoin is StandardToken {
   string public name = "Dedcoin";
@@ -8,7 +8,7 @@ contract Dedcoin is StandardToken {
   uint public INITIAL_SUPPLY = 10000000000 * (10 ** decimals);
 
   function Dedcoin() public {
-    totalSupply = INITIAL_SUPPLY;
+    totalSupply_ = INITIAL_SUPPLY;
     balances[msg.sender] = INITIAL_SUPPLY;
   }
 }
