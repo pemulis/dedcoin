@@ -1,7 +1,7 @@
 {
   "name": "dedcoin",
   "version": "1.0.0",
-  "description": "Dedcoin is an ERC-20 token guaranteed to always decline in price. What profit can we show for all our toil, toiling under the sun?",
+  "description": "Dedcoin is an ERC-20 token guaranteed to decline in price. What profit can we show for all our toil, toiling under the sun?",
   "main": "truffle-config.js",
   "directories": {
     "test": "test"
