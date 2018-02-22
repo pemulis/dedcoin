@@ -1,7 +1,7 @@
 require('dotenv').config();
 const Web3 = require("web3");
 const web3 = new Web3();
-const WalletProvider = require("truffle-hdwallet-provider");
+const WalletProvider = require("truffle-wallet-provider");
 const Wallet = require('ethereumjs-wallet');
 
 var mainNetPrivateKey = new Buffer(process.env["MAINNET_PRIVATE_KEY"], "hex")
@@ -26,13 +26,13 @@ module.exports = {
       // truffle deploy --network rinkeby
       // truffle(rinkeby)> web3.eth.getBlock("pending", (error, result) =>
       //   console.log(result.gasLimit))
-      gas: 4712388,
+      gas: 4612388,
       gasPrice: 100000000000,
       network_id: "3",
     },
     mainnet: {
       provider: mainNetProvider,
-      gas: 4712388,
+      gas: 4612388,
       gasPrice: 100000000000,
       network_id: "1",
     }

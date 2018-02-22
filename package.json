@@ -20,12 +20,12 @@
   },
   "homepage": "https://github.com/pemulis/dedcoin#readme",
   "dependencies": {
-    "truffle-hdwallet-provider": "0.0.3",
     "zeppelin-solidity": "^1.7.0"
   },
   "devDependencies": {
     "dotenv": "^5.0.0",
     "ethereumjs-wallet": "^0.6.0",
+    "truffle-hdwallet-provider": "0.0.3",
     "truffle-wallet-provider": "0.0.5"
   }
 }
