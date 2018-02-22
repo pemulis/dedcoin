@@ -6,7 +6,7 @@ module.exports = function(deployer, network, accounts) {
   const finalRate = 1
   const openingTime = web3.eth.getBlock(web3.eth.blockNumber).timestamp + 1 // one second in the future
   const closingTime = openingTime + (86400 * 20) // 20 days
-  const rate = new web3.BigNumber(1000)
+  const rate = (1/30000000000000000)
   const wallet = accounts[0]
   const token = Dedcoin
 
